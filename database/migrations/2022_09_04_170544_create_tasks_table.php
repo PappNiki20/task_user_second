@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             //automatikusan BigInt, autoincrement, primary key
             $table->id();
-            $table->string('title', 50)->unique();
+            $table->string('title', 50);
             $table->longText('description',255);
             $table->date('end_date')->default('2022-05-21');
             //létre is hozza a user_id nevű oszlopot, és beállítja a kapcsolatot
